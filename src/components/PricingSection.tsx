@@ -1,56 +1,56 @@
-import { Check, Sparkles, Zap, Crown } from 'lucide-react';
+import { Check, Sparkles, Zap, Crown } from "lucide-react";
 
 export function PricingSection() {
   const plans = [
     {
-      name: 'Gratuit',
-      price: '0€',
-      description: 'Parfait pour explorer vos pensées',
+      name: "Gratuit",
+      price: "0€",
+      description: "Parfait pour explorer vos pensées",
       icon: Sparkles,
-      gradient: 'from-gray-600 to-gray-500',
-      borderGlow: 'hover:shadow-[0_0_30px_rgba(156,163,175,0.3)]',
+      gradient: "from-gray-600 to-gray-500",
+      borderGlow: "hover:shadow-[0_0_30px_rgba(156,163,175,0.3)]",
       features: [
-        'Conversations de réflexion basiques',
-        'Jusqu\'\u00e0 50 questions par mois',
-        'Capture de pensées texte uniquement',
-        'Support communautaire',
+        "Conversations de réflexion basiques",
+        "Jusqu'\u00e0 50 questions par mois",
+        "Capture de pensées texte uniquement",
+        "Support communautaire",
       ],
-      cta: 'Commencer Gratuitement',
+      cta: "Commencer Gratuitement",
       highlight: false,
     },
     {
-      name: 'Créateur',
-      price: '19€',
-      description: 'Pour les créatifs prêts à visualiser',
+      name: "Créateur",
+      price: "19€",
+      description: "Pour les créatifs prêts à visualiser",
       icon: Zap,
-      gradient: 'from-purple-600 to-blue-600',
-      borderGlow: 'hover:shadow-[0_0_40px_rgba(168,85,247,0.5)]',
+      gradient: "from-purple-600 to-blue-600",
+      borderGlow: "hover:shadow-[0_0_40px_rgba(168,85,247,0.5)]",
       features: [
-        'Conversations IA illimitées',
-        'Génération de moodboard dynamique',
-        'Inspiration visuelle auto-sélectionnée',
-        'Export vers Figma & Notion',
-        'Support prioritaire',
+        "Conversations IA illimitées",
+        "Génération de moodboard dynamique",
+        "Inspiration visuelle auto-sélectionnée",
+        "Export vers Figma & Notion",
+        "Support prioritaire",
       ],
-      cta: 'Devenir Créateur',
+      cta: "Devenir Créateur",
       highlight: true,
     },
     {
-      name: 'Visionnaire',
-      price: '49€',
-      description: 'Cartographie mentale complète déverrouillée',
+      name: "Visionnaire",
+      price: "49€",
+      description: "Cartographie mentale complète déverrouillée",
       icon: Crown,
-      gradient: 'from-blue-600 to-teal-600',
-      borderGlow: 'hover:shadow-[0_0_40px_rgba(59,130,246,0.5)]',
+      gradient: "from-blue-600 to-teal-600",
+      borderGlow: "hover:shadow-[0_0_40px_rgba(59,130,246,0.5)]",
       features: [
-        'Tout du forfait Créateur',
-        'Accès complet aux Cartes Mentales',
-        'Espace de travail canevas infini',
-        'Connexion auto des idées reliées',
-        'Accès API pour intégrations',
-        'Intégration personnalisée',
+        "Tout du forfait Créateur",
+        "Accès complet aux Cartes Mentales",
+        "Espace de travail canevas infini",
+        "Connexion auto des idées reliées",
+        "Accès API pour intégrations",
+        "Intégration personnalisée",
       ],
-      cta: 'Devenir Visionnaire',
+      cta: "Devenir Visionnaire",
       highlight: false,
     },
   ];
@@ -73,7 +73,8 @@ export function PricingSection() {
             </span>
           </h2>
           <p className="text-xl text-gray-400">
-            Commencez gratuitement, passez à la version supérieure quand vous êtes prêt à aller plus loin.
+            Commencez gratuitement, passez à la version supérieure quand vous
+            êtes prêt à aller plus loin.
           </p>
         </div>
 
@@ -86,8 +87,8 @@ export function PricingSection() {
                 key={index}
                 className={`relative group rounded-[48px] p-8 backdrop-blur-xl border transition-all ${
                   plan.highlight
-                    ? 'bg-gradient-to-br from-white/10 to-white/5 border-white/20 scale-105'
-                    : 'bg-white/5 border-white/10 hover:border-white/20'
+                    ? "bg-gradient-to-br from-white/10 to-white/5 border-white/20 scale-105"
+                    : "bg-white/5 border-white/10 hover:border-white/20"
                 } ${plan.borderGlow}`}
               >
                 {/* Popular badge */}
@@ -98,15 +99,21 @@ export function PricingSection() {
                 )}
 
                 {/* Icon */}
-                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${plan.gradient} mb-6`}>
+                <div
+                  className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${plan.gradient} mb-6`}
+                >
                   <Icon className="w-8 h-8 text-white" />
                 </div>
 
                 {/* Plan name & price */}
                 <div className="mb-6">
-                  <h3 className="text-2xl font-medium text-white mb-2">{plan.name}</h3>
+                  <h3 className="text-2xl font-medium text-white mb-2">
+                    {plan.name}
+                  </h3>
                   <div className="flex items-baseline gap-1 mb-2">
-                    <span className="text-5xl font-medium text-white">{plan.price}</span>
+                    <span className="text-5xl font-medium text-white">
+                      {plan.price}
+                    </span>
                     <span className="text-gray-400">/mois</span>
                   </div>
                   <p className="text-sm text-gray-400">{plan.description}</p>
@@ -116,7 +123,9 @@ export function PricingSection() {
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, i) => (
                     <li key={i} className="flex items-start gap-3">
-                      <div className={`w-5 h-5 rounded-full bg-gradient-to-br ${plan.gradient} flex items-center justify-center flex-shrink-0 mt-0.5`}>
+                      <div
+                        className={`w-5 h-5 rounded-full bg-gradient-to-br ${plan.gradient} flex items-center justify-center flex-shrink-0 mt-0.5`}
+                      >
                         <Check className="w-3 h-3 text-white" />
                       </div>
                       <span className="text-sm text-gray-300">{feature}</span>
@@ -129,7 +138,7 @@ export function PricingSection() {
                   className={`w-full py-4 rounded-3xl font-medium transition-all ${
                     plan.highlight
                       ? `bg-gradient-to-r ${plan.gradient} text-white hover:scale-105`
-                      : 'bg-white/5 text-white hover:bg-white/10 border border-white/10'
+                      : "bg-white/5 text-white hover:bg-white/10 border border-white/10"
                   }`}
                 >
                   {plan.cta}
@@ -142,7 +151,8 @@ export function PricingSection() {
         {/* Additional info */}
         <div className="text-center mt-12 space-y-4">
           <p className="text-gray-400">
-            Tous les forfaits incluent une garantie satisfait ou remboursé de 14 jours
+            Tous les forfaits incluent une garantie satisfait ou remboursé de 14
+            jours
           </p>
           <div className="flex items-center justify-center gap-8 text-sm text-gray-500">
             <span>✓ Aucune carte de crédit requise pour Gratuit</span>

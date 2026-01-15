@@ -1,11 +1,24 @@
-import { MessageCircle, Sparkles } from 'lucide-react';
+import { MessageCircle, Sparkles } from "lucide-react";
 
 export function QuestioningSection() {
   const chatMessages = [
-    { role: 'user', text: 'Je veux concevoir quelque chose qui semble organique et vivant.' },
-    { role: 'ai', text: 'Que signifie "vivant" pour vous dans ce contexte ? Est-ce le mouvement, la croissance, ou autre chose ?', isHighlight: true },
-    { role: 'user', text: 'Peut-être que c\'est à propos de l\'evolution... des choses qui changent avec le temps.' },
-    { role: 'ai', text: 'Intéressant. Qu\'est-ce qui se cache derrière ce concept d\'evolution pour vous ?' },
+    {
+      role: "user",
+      text: "Je veux concevoir quelque chose qui semble organique et vivant.",
+    },
+    {
+      role: "ai",
+      text: 'Que signifie "vivant" pour vous dans ce contexte ? Est-ce le mouvement, la croissance, ou autre chose ?',
+      isHighlight: true,
+    },
+    {
+      role: "user",
+      text: "Peut-être que c'est à propos de l'evolution... des choses qui changent avec le temps.",
+    },
+    {
+      role: "ai",
+      text: "Intéressant. Qu'est-ce qui se cache derrière ce concept d'evolution pour vous ?",
+    },
   ];
 
   return (
@@ -21,7 +34,9 @@ export function QuestioningSection() {
           <div className="space-y-6">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-500/10 backdrop-blur-sm border border-teal-500/20">
               <MessageCircle className="w-4 h-4 text-teal-400" />
-              <span className="text-sm text-teal-300">Questionnement Neutre</span>
+              <span className="text-sm text-teal-300">
+                Questionnement Neutre
+              </span>
             </div>
 
             <h2 className="text-5xl lg:text-6xl tracking-tight">
@@ -33,14 +48,16 @@ export function QuestioningSection() {
             </h2>
 
             <p className="text-xl text-gray-400 leading-relaxed">
-              Lumen pose des questions profondes et socratiques qui vous aident à creuser vos propres idées—sans jamais imposer sa propre perspective.
+              Lumen pose des questions profondes et socratiques qui vous aident
+              à creuser vos propres idées—sans jamais imposer sa propre
+              perspective.
             </p>
 
             <div className="space-y-4 pt-4">
               {[
-                'Questionnement non directif',
-                'Reflète votre langage',
-                'Aucun biais algorithmique dans la créativité',
+                "Questionnement non directif",
+                "Reflète votre langage",
+                "Aucun biais algorithmique dans la créativité",
               ].map((point, i) => (
                 <div key={i} className="flex items-center gap-3">
                   <div className="w-6 h-6 rounded-full bg-gradient-to-br from-teal-500 to-blue-500 flex items-center justify-center flex-shrink-0">
@@ -63,7 +80,9 @@ export function QuestioningSection() {
                 </div>
                 <div>
                   <div className="font-medium text-white">Lumen</div>
-                  <div className="text-xs text-gray-400">Partenaire de Réflexion IA</div>
+                  <div className="text-xs text-gray-400">
+                    Partenaire de Réflexion IA
+                  </div>
                 </div>
               </div>
 
@@ -72,15 +91,17 @@ export function QuestioningSection() {
                 {chatMessages.map((message, i) => (
                   <div
                     key={i}
-                    className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}
+                    className={`flex ${
+                      message.role === "user" ? "justify-end" : "justify-start"
+                    }`}
                   >
                     <div
                       className={`max-w-[80%] px-4 py-3 rounded-3xl ${
-                        message.role === 'user'
-                          ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white'
+                        message.role === "user"
+                          ? "bg-gradient-to-r from-purple-600 to-blue-600 text-white"
                           : message.isHighlight
-                          ? 'bg-gradient-to-r from-teal-600/20 to-blue-600/20 border border-teal-500/30 text-white'
-                          : 'bg-white/5 text-gray-300'
+                          ? "bg-gradient-to-r from-teal-600/20 to-blue-600/20 border border-teal-500/30 text-white"
+                          : "bg-white/5 text-gray-300"
                       }`}
                     >
                       <p className="text-sm leading-relaxed">{message.text}</p>

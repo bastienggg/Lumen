@@ -1,11 +1,11 @@
-import { Sparkles, Twitter, Instagram, Linkedin, Mail } from 'lucide-react';
+import { Sparkles, Twitter, Instagram, Linkedin, Mail } from "lucide-react";
 
 export function Footer() {
   const footerLinks = {
-    Produit: ['Fonctionnalités', 'Tarifs', 'Feuille de route', 'Changelog'],
-    Entreprise: ['À propos', 'Blog', 'Carrières', 'Kit Presse'],
-    Ressources: ['Documentation', 'Centre d\'aide', 'Communauté', 'Contact'],
-    Légal: ['Confidentialité', 'Conditions', 'Sécurité', 'Cookies'],
+    Produit: ["Fonctionnalités", "Tarifs", "Feuille de route", "Changelog"],
+    Entreprise: ["À propos", "Blog", "Carrières", "Kit Presse"],
+    Ressources: ["Documentation", "Centre d'aide", "Communauté", "Contact"],
+    Légal: ["Confidentialité", "Conditions", "Sécurité", "Cookies"],
   };
 
   return (
@@ -22,12 +22,13 @@ export function Footer() {
             <Mail className="w-4 h-4 text-purple-400" />
             <span className="text-sm text-purple-300">Restez Connecté</span>
           </div>
-          
+
           <h3 className="text-3xl font-medium text-white mb-4">
             Recevez des insights créatifs chaque semaine
           </h3>
           <p className="text-gray-400 mb-8">
-            Rejoignez 10 000+ créateurs qui reçoivent des conseils, mises à jour et accès anticipé exclusif.
+            Rejoignez 10 000+ créateurs qui reçoivent des conseils, mises à jour
+            et accès anticipé exclusif.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
@@ -56,15 +57,16 @@ export function Footer() {
               <span className="text-xl font-medium text-white">Lumen</span>
             </div>
             <p className="text-sm text-gray-400 mb-6 max-w-xs">
-              Vos pensées, visualisées. Un partenaire IA pour les esprits créatifs.
+              Vos pensées, visualisées. Un partenaire IA pour les esprits
+              créatifs.
             </p>
-            
+
             {/* Social Links */}
             <div className="flex items-center gap-3">
               {[
-                { Icon: Twitter, href: '#' },
-                { Icon: Instagram, href: '#' },
-                { Icon: Linkedin, href: '#' },
+                { Icon: Twitter, href: "#" },
+                { Icon: Instagram, href: "#" },
+                { Icon: Linkedin, href: "#" },
               ].map(({ Icon, href }, i) => (
                 <a
                   key={i}
@@ -80,11 +82,16 @@ export function Footer() {
           {/* Link Columns */}
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category}>
-              <h4 className="text-sm font-medium text-white mb-4">{category}</h4>
+              <h4 className="text-sm font-medium text-white mb-4">
+                {category}
+              </h4>
               <ul className="space-y-3">
                 {links.map((link) => (
                   <li key={link}>
-                    <a href="#" className="text-sm text-gray-400 hover:text-white transition-colors">
+                    <a
+                      href="#"
+                      className="text-sm text-gray-400 hover:text-white transition-colors"
+                    >
                       {link}
                     </a>
                   </li>
@@ -102,7 +109,9 @@ export function Footer() {
           <div className="flex items-center gap-6 text-sm text-gray-500">
             <span>Conçu avec ✨ pour les créatifs</span>
             <span>•</span>
-            <a href="#" className="hover:text-white transition-colors">Statut</a>
+            <a href="#" className="hover:text-white transition-colors">
+              Statut
+            </a>
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
-import { Network, Lock, Zap, ArrowRight } from 'lucide-react';
-import { ImageWithFallback } from './figma/ImageWithFallback';
+import { Network, Lock, Zap, ArrowRight } from "lucide-react";
+import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 export function MindMapSection() {
   return (
@@ -20,11 +20,13 @@ export function MindMapSection() {
                 alt="Complex mind map visualization"
                 className="w-full h-auto rounded-3xl"
               />
-              
+
               {/* Overlay lock badge */}
               <div className="absolute top-12 right-12 flex items-center gap-2 px-4 py-2 rounded-full bg-black/60 backdrop-blur-md border border-purple-500/30">
                 <Lock className="w-4 h-4 text-purple-400" />
-                <span className="text-sm text-purple-300 font-medium">Fonctionnalité Pro</span>
+                <span className="text-sm text-purple-300 font-medium">
+                  Fonctionnalité Pro
+                </span>
               </div>
 
               {/* Sample nodes overlay */}
@@ -34,12 +36,12 @@ export function MindMapSection() {
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-6 py-3 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 text-white text-sm font-medium shadow-lg">
                     Idée Centrale
                   </div>
-                  
+
                   {/* Connected nodes */}
                   {[
-                    { top: '20%', left: '30%', label: 'Concept A' },
-                    { top: '70%', left: '20%', label: 'Thème B' },
-                    { top: '30%', left: '70%', label: 'Vision C' },
+                    { top: "20%", left: "30%", label: "Concept A" },
+                    { top: "70%", left: "20%", label: "Thème B" },
+                    { top: "30%", left: "70%", label: "Vision C" },
                   ].map((node, i) => (
                     <div
                       key={i}
@@ -58,7 +60,9 @@ export function MindMapSection() {
           <div className="space-y-6 order-1 lg:order-2">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-500/10 backdrop-blur-sm border border-purple-500/20">
               <Network className="w-4 h-4 text-purple-400" />
-              <span className="text-sm text-purple-300">Cartographie Mentale</span>
+              <span className="text-sm text-purple-300">
+                Cartographie Mentale
+              </span>
             </div>
 
             <h2 className="text-5xl lg:text-6xl tracking-tight">
@@ -70,15 +74,20 @@ export function MindMapSection() {
             </h2>
 
             <p className="text-xl text-gray-400 leading-relaxed">
-              Déverrouillez la fonctionnalité complète de Carte Mentale pour voir vos idées s'interconnecter dans une belle visualisation basée sur des nœuds.
+              Déverrouillez la fonctionnalité complète de Carte Mentale pour
+              voir vos idées s'interconnecter dans une belle visualisation basée
+              sur des nœuds.
             </p>
 
             {/* Feature list */}
             <div className="space-y-4 pt-4">
               {[
-                { icon: Network, text: 'Canevas infini pour cartographier vos idées' },
-                { icon: Zap, text: 'Connexion auto des concepts reliés' },
-                { icon: Lock, text: 'Exportez en image ou fichier interactif' },
+                {
+                  icon: Network,
+                  text: "Canevas infini pour cartographier vos idées",
+                },
+                { icon: Zap, text: "Connexion auto des concepts reliés" },
+                { icon: Lock, text: "Exportez en image ou fichier interactif" },
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center flex-shrink-0">
@@ -95,7 +104,9 @@ export function MindMapSection() {
                 Déverrouiller les Cartes Mentales
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
-              <p className="text-sm text-gray-500 mt-3">Disponible dans les forfaits Créateur & Visionnaire</p>
+              <p className="text-sm text-gray-500 mt-3">
+                Disponible dans les forfaits Créateur & Visionnaire
+              </p>
             </div>
           </div>
         </div>

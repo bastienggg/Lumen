@@ -1,5 +1,5 @@
-import { Sparkles } from 'lucide-react';
-import { ImageWithFallback } from './figma/ImageWithFallback';
+import { Sparkles } from "lucide-react";
+import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 export function Hero() {
   return (
@@ -16,7 +16,9 @@ export function Hero() {
         <div className="space-y-8 text-center lg:text-left">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-sm border border-white/10">
             <Sparkles className="w-4 h-4 text-purple-400" />
-            <span className="text-sm text-gray-300">Compagnon de Pensée à IA</span>
+            <span className="text-sm text-gray-300">
+              Compagnon de Pensée à IA
+            </span>
           </div>
 
           <h1 className="text-6xl lg:text-7xl xl:text-8xl tracking-tight">
@@ -24,12 +26,16 @@ export function Hero() {
               Lumen:
             </span>
             <span className="block mt-2">
-              Vos Pensées, <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Visualisées.</span>
+              Vos Pensées,{" "}
+              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                Visualisées.
+              </span>
             </span>
           </h1>
 
           <p className="text-xl text-gray-400 max-w-2xl">
-            Un partenaire IA qui écoute, questionne et reflète votre créativité sans l'influencer.
+            Un partenaire IA qui écoute, questionne et reflète votre créativité
+            sans l'influencer.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -40,7 +46,7 @@ export function Hero() {
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </button>
-            
+
             <button className="px-8 py-4 rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10 text-white font-medium hover:bg-white/10 transition-all">
               Voir la Démo
             </button>
@@ -50,11 +56,15 @@ export function Hero() {
           <div className="flex items-center gap-6 justify-center lg:justify-start pt-4">
             <div className="flex -space-x-3">
               {[1, 2, 3, 4].map((i) => (
-                <div key={i} className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-blue-500 border-2 border-[#0A0A0A]"></div>
+                <div
+                  key={i}
+                  className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-blue-500 border-2 border-[#0A0A0A]"
+                ></div>
               ))}
             </div>
             <div className="text-sm text-gray-400">
-              <span className="text-white font-medium">10 000+</span> créateurs pensent avec Lumen
+              <span className="text-white font-medium">10 000+</span> créateurs
+              pensent avec Lumen
             </div>
           </div>
         </div>
